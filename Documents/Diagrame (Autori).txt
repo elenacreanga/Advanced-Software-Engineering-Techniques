@@ -1,0 +1,9 @@
+Neagu Gabriela:
+	DomainClassesDiagram.jpg - 
+	LoginUseCase.jpg
+
+Tiba Bianca Madalina, Tiba Georgiana Isabela
+	Deployment.png 
+	DiagramaDeSecventa.png
+	UseCaseCollectionManager.png
+	UseCaseCollectionsManager.png
