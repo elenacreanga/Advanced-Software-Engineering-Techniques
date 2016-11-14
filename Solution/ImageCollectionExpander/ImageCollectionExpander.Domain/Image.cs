@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 
 namespace ImageCollectionExpander.Models
 {
@@ -13,7 +12,7 @@ namespace ImageCollectionExpander.Models
         public bool FromAPI { get; set; }
         public Location GettyLocation { get; set; }
         public String GettySize { get; set; }
-        public Color MainColor { get; set; }
+        public String MainColor { get; set; }
         public List<Tag> Tags { get; set; }
         public String Title { get; set; }
         public String Uri { get; set; }
