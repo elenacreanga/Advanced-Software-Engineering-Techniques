@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ImageCollectionExpander.DAL.DAL.Contracts
 {
-    public interface IRepository<T> where T : class
+    public interface IGenericRepository<T> where T : class
     {
         IEnumerable<T> SelectAll();
         T SelectByID(object id);
