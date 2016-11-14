@@ -6,7 +6,7 @@ namespace ICE.Infrastructure
     {
         public void RegisterDependencies(ContainerBuilder builder)
         {
-            //new Register("Repository", typeof(_DefaultRepository_).Assembly).Bind(builder);
+            new Register("Repository", typeof(_DefaultRepository_).Assembly).Bind(builder);
         }
     }
 }
