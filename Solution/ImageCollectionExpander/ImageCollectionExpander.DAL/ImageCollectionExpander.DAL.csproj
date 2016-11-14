@@ -49,7 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL.Contracts\IRepository.cs" />
+    <Compile Include="DAL.Contracts\IGenericRepository.cs" />
+    <Compile Include="DAL.Implementation\GenericRepository.cs" />
     <Compile Include="DAL.Implementation\ImageCollectionExpanderDbContext.cs" />
     <Compile Include="DAL.Implementation\Mappings\ImageCollectionMapping.cs" />
     <Compile Include="DAL.Implementation\Mappings\ImageMapping.cs" />
