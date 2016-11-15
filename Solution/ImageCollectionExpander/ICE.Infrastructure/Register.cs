@@ -1,5 +1,7 @@
 ﻿using System.Reflection;
 using Autofac;
+using ImageCollectionExpander.DAL.DAL.Contracts;
+using ImageCollectionExpander.DAL.DAL.Implementation;
 
 namespace ICE.Infrastructure
 {
@@ -16,6 +18,7 @@ namespace ICE.Infrastructure
 
         public void Bind(ContainerBuilder builder)
         {
+            builder.RegisterGeneric(typeof(GenericRepository<>)).As(typeof(IGenericRepository<>));
             builder.RegisterAssemblyTypes(assembly)
                 .Where(type => type.Name.EndsWith(ending) && !type.IsGenericType)
                 .AsImplementedInterfaces()
