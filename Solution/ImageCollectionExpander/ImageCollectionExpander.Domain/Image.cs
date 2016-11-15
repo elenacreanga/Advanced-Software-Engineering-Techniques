@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ImageCollectionExpander.Models
+namespace ImageCollectionExpander.Domain
 {
     public class Image
     {

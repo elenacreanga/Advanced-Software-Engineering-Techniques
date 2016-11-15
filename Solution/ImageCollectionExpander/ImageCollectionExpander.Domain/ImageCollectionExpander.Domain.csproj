@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IdentityModels.cs" />
     <Compile Include="Image.cs" />
     <Compile Include="ImageCollection.cs" />
     <Compile Include="Location.cs" />
