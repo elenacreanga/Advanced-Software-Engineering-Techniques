@@ -51,5 +51,11 @@ namespace ImageCollectionExpander.DAL.DAL.Implementation
             T existing = dbSet.Find(id);
             dbSet.Remove(existing);
         }
+
+
+        public void Save()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
