@@ -1,13 +1,17 @@
-﻿namespace ImageCollectionExpander.Domain
+﻿using System.Collections.Generic;
+namespace ImageCollectionExpander.Domain
 {
     public class Location
     {
-        public double Longitute { get; set; }
+        public int? LocationId { get; set; }
+        public double Longitude { get; set; }
         public double Latitude { get; set; }
+
+        public virtual ICollection<Image> FoundInImages { get; set; }
 
         public Location()
         {
-
+            FoundInImages = new List<Image>();
         }
     }
 }

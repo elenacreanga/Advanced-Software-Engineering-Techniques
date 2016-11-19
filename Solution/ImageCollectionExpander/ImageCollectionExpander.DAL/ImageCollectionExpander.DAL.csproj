@@ -54,6 +54,7 @@
     <Compile Include="DAL.Implementation\ImageCollectionExpanderDbContext.cs" />
     <Compile Include="DAL.Implementation\Mappings\ImageCollectionMapping.cs" />
     <Compile Include="DAL.Implementation\Mappings\ImageMapping.cs" />
+    <Compile Include="DAL.Implementation\Mappings\LocationMapping.cs" />
     <Compile Include="DAL.Implementation\Mappings\TagMapping.cs" />
     <Compile Include="DAL.Implementation\Mappings\UserMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

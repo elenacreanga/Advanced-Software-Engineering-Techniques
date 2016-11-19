@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ImageCollectionExpander.DAL.DAL.Implementation;
+using ImageCollectionExpander.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,9 +12,18 @@ namespace ImageCollectionExpander.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        public HttpResponseMessage Get()
         {
-            return new string[] { "value1", "value2" };
+            ImageCollectionExpanderDbContext context = new ImageCollectionExpanderDbContext();
+            GenericRepository<User> userRepo = new GenericRepository<User>(context);
+            userRepo.Insert(new User()
+            {
+                FbUserName = "Adi",
+                UserId = 1
+            });
+            context.SaveChanges();
+            return new HttpResponseMessage(HttpStatusCode.OK);
+            //return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5

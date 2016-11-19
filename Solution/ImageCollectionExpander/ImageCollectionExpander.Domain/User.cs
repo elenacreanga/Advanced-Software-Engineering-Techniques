@@ -5,12 +5,13 @@ namespace ImageCollectionExpander.Domain
 {
     public class User
     {
+        public int UserId { get; set; }
         public String FbUserName { get; set; }
-        public List<ImageCollection> ImageCollections { get; set; }
+        public virtual ICollection<ImageCollection> ImageCollections { get; set; }
 
         public User()
         {
-
+            ImageCollections = new List<ImageCollection>();
         }
     }
 }

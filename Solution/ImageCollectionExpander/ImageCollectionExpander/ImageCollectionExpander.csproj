@@ -332,6 +332,14 @@
       <Project>{F47D9CEF-5A15-4D0D-A459-F8120DE9211F}</Project>
       <Name>ICE.Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ImageCollectionExpander.DAL\ImageCollectionExpander.DAL.csproj">
+      <Project>{67e7e46a-1d5a-4d13-8a89-9789a96e2e34}</Project>
+      <Name>ImageCollectionExpander.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImageCollectionExpander.Domain\ImageCollectionExpander.Domain.csproj">
+      <Project>{6d06e1ad-adeb-4e4b-a553-0319415ae55c}</Project>
+      <Name>ImageCollectionExpander.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
