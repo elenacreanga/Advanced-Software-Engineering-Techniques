@@ -55,7 +55,7 @@ namespace ImageCollectionExpander.DAL.DAL.Implementation
 
         public void Save()
         {
-            throw new NotImplementedException();
+            dbContext.SaveChanges();
         }
     }
 }
