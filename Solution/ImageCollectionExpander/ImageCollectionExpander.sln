@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6F0258
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICE.Infrastructure", "ICE.Infrastructure\ICE.Infrastructure.csproj", "{F47D9CEF-5A15-4D0D-A459-F8120DE9211F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCollectionExpander.Business", "ImageCollectionExpander.Business\ImageCollectionExpander.Business.csproj", "{4FF34143-92CB-478A-A155-B545251D4E77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{F47D9CEF-5A15-4D0D-A459-F8120DE9211F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F47D9CEF-5A15-4D0D-A459-F8120DE9211F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F47D9CEF-5A15-4D0D-A459-F8120DE9211F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF34143-92CB-478A-A155-B545251D4E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF34143-92CB-478A-A155-B545251D4E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF34143-92CB-478A-A155-B545251D4E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF34143-92CB-478A-A155-B545251D4E77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

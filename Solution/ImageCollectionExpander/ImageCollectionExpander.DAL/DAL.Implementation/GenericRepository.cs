@@ -52,7 +52,6 @@ namespace ImageCollectionExpander.DAL.DAL.Implementation
             dbSet.Remove(existing);
         }
 
-
         public void Save()
         {
             dbContext.SaveChanges();

@@ -8,6 +8,7 @@ namespace ImageCollectionExpander.Domain
         public int ImageCollectionId { get; set; }
         public ICollection<Image> Images { get; set; }
         public ICollection<Tag> MainTags { get; set; }
+
         public String Name { get; set; }
 
         public int UserId { get; set; }
