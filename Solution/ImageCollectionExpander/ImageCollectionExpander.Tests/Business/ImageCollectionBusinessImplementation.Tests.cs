@@ -14,21 +14,21 @@ namespace ImageCollectionExpander.Tests.Business
     [TestClass]
     public class ImageCollectionBusinessImplementationTest
     {
-        private IImageCollectionBusinessContracts imgCollectionBusinessImplem;
+        private IImageCollectionFacade imgCollectionBusinessImplem;
         private IGenericRepository<User> userRepository;
 
         [TestInitialize]
         public void TestInitialize()
         {
             this.userRepository = Substitute.For<IGenericRepository<User>>();
-            this.imgCollectionBusinessImplem = new ImageCollectionBusinessImplementation(this.userRepository);
+            this.imgCollectionBusinessImplem = new ImageCollectionFacade(this.userRepository);
         }
 
         [TestMethod]
         public void Ctor_ShouldThrowArgumentNullException_WhenImgCollectionRepositoryParamInstanceIsNull()
         {
             //Arrange, Act
-            Action action = () => this.imgCollectionBusinessImplem = new ImageCollectionBusinessImplementation(null);
+            Action action = () => this.imgCollectionBusinessImplem = new ImageCollectionFacade(null);
 
             //Assert
             action.ShouldThrow<ArgumentNullException>();
