@@ -20,6 +20,20 @@
                ReferencedContainer = "container:ImageCollectionExpander.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DB6FFDDF1DD8982900C087A6"
+               BuildableName = "ImageCollectionExpanderUITests.xctest"
+               BlueprintName = "ImageCollectionExpanderUITests"
+               ReferencedContainer = "container:ImageCollectionExpander.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,26 +42,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB6FFDD41DD8982900C087A6"
-               BuildableName = "ImageCollectionExpanderTests.xctest"
-               BlueprintName = "ImageCollectionExpanderTests"
-               ReferencedContainer = "container:ImageCollectionExpander.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB6FFDDF1DD8982900C087A6"
-               BuildableName = "ImageCollectionExpanderUITests.xctest"
-               BlueprintName = "ImageCollectionExpanderUITests"
-               ReferencedContainer = "container:ImageCollectionExpander.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -81,6 +75,13 @@
             ReferencedContainer = "container:ImageCollectionExpander.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

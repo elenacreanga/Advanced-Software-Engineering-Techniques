@@ -31,6 +31,20 @@ class ImageCollectionExpanderUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        XCTAssert(app.staticTexts["No user logged in."].exists)
+        app.buttons["Log in with Facebook"].tap()
+        app.buttons["Done"].tap()
+        XCTAssert(app.staticTexts["User logged in."].exists)
+    }
+    
+    func testlogOut() {
+        let app = XCUIApplication()
+        XCTAssert(app.staticTexts["User logged in."].exists)
+        app.buttons["Log out"].tap()
+        app.buttons["Log Out"].tap()
+        XCTAssert(app.staticTexts["No user logged in."].exists)
     }
     
 }
