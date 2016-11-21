@@ -2,14 +2,12 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FluentAssertions;
 using ImageCollectionExpander.Business.Business.Implementation;
 using ImageCollectionExpander.Domain;
-using ImageCollectionExpander.DAL.DAL.Contracts.Fakes;
 using ICE.Infrastructure.Exceptions;
+using ImageCollectionExpander.DAL.DAL.Contracts;
+using NSubstitute;
 
 namespace ImageCollectionExpander.Tests.Business
 {
@@ -17,12 +15,12 @@ namespace ImageCollectionExpander.Tests.Business
     public class ImageCollectionBusinessImplementationTest
     {
         private IImageCollectionBusinessContracts imgCollectionBusinessImplem;
-        private StubIGenericRepository<User> userRepository;
+        private IGenericRepository<User> userRepository;
 
         [TestInitialize]
         public void TestInitialize()
         {
-            this.userRepository = new StubIGenericRepository<User>();
+            this.userRepository = Substitute.For<IGenericRepository<User>>();
             this.imgCollectionBusinessImplem = new ImageCollectionBusinessImplementation(this.userRepository);
         }
 
@@ -49,7 +47,7 @@ namespace ImageCollectionExpander.Tests.Business
                 ImageCollections = new List<ImageCollection> { new ImageCollection { Name = imageCollectionName } }
             };
 
-            this.userRepository.SelectByIDObject = (id) => user;
+            userRepository.SelectByID(Arg.Any<int>()).Returns(user);
 
             //Act
             Action action = () => this.imgCollectionBusinessImplem.AddImageCollection(imgCollection, user);
