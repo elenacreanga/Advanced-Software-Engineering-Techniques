@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business.Contracts\IImageCollection.Business.Contracts.cs" />
-    <Compile Include="Business.Implementation\ImageCollection.Business.Implementation.cs" />
+    <Compile Include="Business.Contracts\IImageCollectionFacade.cs" />
+    <Compile Include="Business.Implementation\ImageCollectionFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

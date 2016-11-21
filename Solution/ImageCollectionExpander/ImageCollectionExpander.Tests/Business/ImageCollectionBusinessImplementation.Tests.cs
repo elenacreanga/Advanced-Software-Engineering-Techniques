@@ -2,35 +2,33 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FluentAssertions;
 using ImageCollectionExpander.Business.Business.Implementation;
 using ImageCollectionExpander.Domain;
-using ImageCollectionExpander.DAL.DAL.Contracts.Fakes;
 using ICE.Infrastructure.Exceptions;
+using ImageCollectionExpander.DAL.DAL.Contracts;
+using NSubstitute;
 
 namespace ImageCollectionExpander.Tests.Business
 {
     [TestClass]
     public class ImageCollectionBusinessImplementationTest
     {
-        private IImageCollectionBusinessContracts imgCollectionBusinessImplem;
-        private StubIGenericRepository<User> userRepository;
+        private IImageCollectionFacade imgCollectionBusinessImplem;
+        private IGenericRepository<User> userRepository;
 
         [TestInitialize]
         public void TestInitialize()
         {
-            this.userRepository = new StubIGenericRepository<User>();
-            this.imgCollectionBusinessImplem = new ImageCollectionBusinessImplementation(this.userRepository);
+            this.userRepository = Substitute.For<IGenericRepository<User>>();
+            this.imgCollectionBusinessImplem = new ImageCollectionFacade(this.userRepository);
         }
 
         [TestMethod]
         public void Ctor_ShouldThrowArgumentNullException_WhenImgCollectionRepositoryParamInstanceIsNull()
         {
             //Arrange, Act
-            Action action = () => this.imgCollectionBusinessImplem = new ImageCollectionBusinessImplementation(null);
+            Action action = () => this.imgCollectionBusinessImplem = new ImageCollectionFacade(null);
 
             //Assert
             action.ShouldThrow<ArgumentNullException>();
@@ -49,7 +47,7 @@ namespace ImageCollectionExpander.Tests.Business
                 ImageCollections = new List<ImageCollection> { new ImageCollection { Name = imageCollectionName } }
             };
 
-            this.userRepository.SelectByIDObject = (id) => user;
+            userRepository.SelectByID(Arg.Any<int>()).Returns(user);
 
             //Act
             Action action = () => this.imgCollectionBusinessImplem.AddImageCollection(imgCollection, user);
