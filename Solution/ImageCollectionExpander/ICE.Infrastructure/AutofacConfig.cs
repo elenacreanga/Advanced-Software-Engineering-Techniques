@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using ImageCollectionExpander.DAL.DAL.Contracts;
+using ImageCollectionExpander.DAL.DAL.Implementation;
 
 namespace ICE.Infrastructure
 {
@@ -7,7 +7,7 @@ namespace ICE.Infrastructure
     {
         public void RegisterDependencies(ContainerBuilder builder)
         {
-            new Register("GenericRepository<>", typeof(IGenericRepository<>).Assembly).Bind(builder);
+            new Register("Repository", typeof(GenericRepository<>).Assembly).Bind(builder);
         }
     }
 }
