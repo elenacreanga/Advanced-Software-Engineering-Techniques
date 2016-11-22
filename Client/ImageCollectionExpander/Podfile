@@ -3,6 +3,7 @@ use_frameworks!
 
 target 'ImageCollectionExpander' do
   pod 'AFNetworking'
-  pod 'FBSDKLoginKit'
-  pod 'FBSDKShareKit'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
 end

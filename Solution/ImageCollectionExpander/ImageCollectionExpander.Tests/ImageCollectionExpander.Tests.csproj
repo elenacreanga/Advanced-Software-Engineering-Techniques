@@ -103,7 +103,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\ImageCollectionBusinessImplementation.Tests.cs" />
+    <Compile Include="Business\ImageCollectionFacadeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\Controllers\HomeControllerTest.cs" />
     <Compile Include="Service\Controllers\ValuesControllerTest.cs" />

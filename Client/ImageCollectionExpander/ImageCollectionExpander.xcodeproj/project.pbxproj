@@ -42,6 +42,7 @@
 		1BF1E3B9DF09929FABE55341 /* Pods_ImageCollectionExpander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCollectionExpander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D42C65D7EDA0E9DCE0F2885 /* Pods-ImageCollectionExpander.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCollectionExpander.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCollectionExpander/Pods-ImageCollectionExpander.release.xcconfig"; sourceTree = "<group>"; };
 		2EF12823BC1401B633CA503E /* Pods-ImageCollectionExpander.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCollectionExpander.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCollectionExpander/Pods-ImageCollectionExpander.debug.xcconfig"; sourceTree = "<group>"; };
+		DB59E6EA1DE39B7900859456 /* ImageCollectionExpander.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageCollectionExpander.entitlements; sourceTree = "<group>"; };
 		DB6E13011DD89FE600B54D52 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DB6E13031DD8A0F300B54D52 /* ImageCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollection.swift; sourceTree = "<group>"; };
 		DB6E13051DD8A11500B54D52 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -140,6 +141,7 @@
 		DB6FFDC31DD8982900C087A6 /* ImageCollectionExpander */ = {
 			isa = PBXGroup;
 			children = (
+				DB59E6EA1DE39B7900859456 /* ImageCollectionExpander.entitlements */,
 				DB6E13001DD89FBB00B54D52 /* Models */,
 				DB6FFDC41DD8982900C087A6 /* AppDelegate.swift */,
 				DB6FFDC61DD8982900C087A6 /* ViewController.swift */,
@@ -240,7 +242,13 @@
 				TargetAttributes = {
 					DB6FFDC01DD8982900C087A6 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4TSCY77WND;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					DB6FFDD41DD8982900C087A6 = {
 						CreatedOnToolsVersion = 8.0;
@@ -249,6 +257,7 @@
 					};
 					DB6FFDDF1DD8982900C087A6 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4TSCY77WND;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DB6FFDC01DD8982900C087A6;
 					};
@@ -510,6 +519,8 @@
 			baseConfigurationReference = 2EF12823BC1401B633CA503E /* Pods-ImageCollectionExpander.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ImageCollectionExpander/ImageCollectionExpander.entitlements;
+				DEVELOPMENT_TEAM = 4TSCY77WND;
 				INFOPLIST_FILE = ImageCollectionExpander/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -524,6 +535,8 @@
 			baseConfigurationReference = 1D42C65D7EDA0E9DCE0F2885 /* Pods-ImageCollectionExpander.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ImageCollectionExpander/ImageCollectionExpander.entitlements;
+				DEVELOPMENT_TEAM = 4TSCY77WND;
 				INFOPLIST_FILE = ImageCollectionExpander/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -565,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4TSCY77WND;
 				INFOPLIST_FILE = ImageCollectionExpanderUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.feelit.ImageCollectionExpanderUITests;
@@ -578,6 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4TSCY77WND;
 				INFOPLIST_FILE = ImageCollectionExpanderUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.feelit.ImageCollectionExpanderUITests;
