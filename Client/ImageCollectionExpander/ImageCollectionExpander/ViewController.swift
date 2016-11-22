@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
+    @IBOutlet weak var statusLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let fbLoginManager = FBSDKLoginManager()
+        fbLoginManager.loginBehavior = FBSDKLoginBehavior.native
+        
+        if (FBSDKAccessToken.current() != nil) {
+            statusLabel.text = "User logged in."
+        }
+        
+        let loginButton = FBSDKLoginButton()
+        loginButton.center = self.view.center
+        loginButton.delegate = self
+        self.view.addSubview(loginButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +34,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        statusLabel.text = "No user logged in."
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if error != nil {
+            print(error)
+        } else if result.isCancelled {
+            print("CANCELED")
+        } else {
+            statusLabel.text = "User logged in."
+        }
+    }
 }
 
