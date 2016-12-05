@@ -44,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MOAspects.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ImageCollectionExpander.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,6 +57,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1E224C7ED423736B9748E0BCD70F11D6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>332F91393FB1DE033D370B4CEDDD5FCF</key>
 		<dict>
 			<key>primary</key>
@@ -77,12 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7E0B08329DBEC56311973E4143B9BB5</key>
+		<key>A7FEAA14E89971698ACA148F7F7202F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7FEAA14E89971698ACA148F7F7202F2</key>
+		<key>BF2D13EA7B8B1825FCA8F5779F1BB392</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -33,18 +33,20 @@ PODS:
     - FacebookCore (~> 0.2)
     - FBSDKCoreKit (~> 4.15)
     - FBSDKShareKit (~> 4.15)
-  - FBSDKCoreKit (4.17.0):
+  - FBSDKCoreKit (4.18.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.17.0):
+  - FBSDKLoginKit (4.18.0):
     - FBSDKCoreKit
-  - FBSDKShareKit (4.17.0):
+  - FBSDKShareKit (4.18.0):
     - FBSDKCoreKit
+  - MOAspects (1.0.0)
 
 DEPENDENCIES:
   - AFNetworking
   - FacebookCore
   - FacebookLogin
   - FacebookShare
+  - MOAspects (~> 1.0.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -52,10 +54,11 @@ SPEC CHECKSUMS:
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
   FacebookShare: 8e9ee8ea06505e6a1d3d719b0cc63e840fb8aaeb
-  FBSDKCoreKit: 30a21d2d7b92984b3d80497113433c00824c35e9
-  FBSDKLoginKit: 42b7129ac0373ca99eaf4cbebf4d07bd42371f59
-  FBSDKShareKit: 9b573d03fbee36cbaf42d5bb1f2bc019e0d72347
+  FBSDKCoreKit: 15fef8804a4629f98c6f4e55e81a76c9d725d85e
+  FBSDKLoginKit: 6773073e970b2b15fb12e451ce7f11da0532b880
+  FBSDKShareKit: 0b8d6cc3f103c75297eb3c62caec284a2ccf1b9e
+  MOAspects: 09dec0c48db7b2476284830debcfb1beb46ebdb4
 
-PODFILE CHECKSUM: 6f0be0b85f868ab61eefca2813c97c1668edbd63
+PODFILE CHECKSUM: 9cb771b7f3f0df714de1be86a679a73e7e9ff281
 
 COCOAPODS: 1.1.1

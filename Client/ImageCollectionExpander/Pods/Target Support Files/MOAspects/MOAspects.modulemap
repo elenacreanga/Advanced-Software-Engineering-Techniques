@@ -1,0 +1,6 @@
+framework module MOAspects {
+  umbrella header "MOAspects-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		358EA29C2589CC05F184EF86 /* Pods_ImageCollectionExpander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF1E3B9DF09929FABE55341 /* Pods_ImageCollectionExpander.framework */; };
+		DB4274311DF442C500649141 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4274301DF442C500649141 /* BaseViewController.swift */; };
+		DB42754B1DF445C700649141 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB42754A1DF445C700649141 /* HomeViewController.swift */; };
+		DB42754F1DF44BEB00649141 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB42754E1DF44BEB00649141 /* AlbumCollectionViewCell.swift */; };
 		DB6E13021DD89FE600B54D52 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6E13011DD89FE600B54D52 /* User.swift */; };
 		DB6E13041DD8A0F300B54D52 /* ImageCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6E13031DD8A0F300B54D52 /* ImageCollection.swift */; };
 		DB6E13061DD8A11500B54D52 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6E13051DD8A11500B54D52 /* Image.swift */; };
@@ -19,6 +22,8 @@
 		DB6FFDCF1DD8982900C087A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6FFDCD1DD8982900C087A6 /* LaunchScreen.storyboard */; };
 		DB6FFDDA1DD8982900C087A6 /* ImageCollectionExpanderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FFDD91DD8982900C087A6 /* ImageCollectionExpanderTests.swift */; };
 		DB6FFDE51DD8982A00C087A6 /* ImageCollectionExpanderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FFDE41DD8982900C087A6 /* ImageCollectionExpanderUITests.swift */; };
+		DB92813A1DF46362007273FA /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9281391DF46362007273FA /* ImageCollectionViewCell.swift */; };
+		DB92813C1DF4639D007273FA /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB92813B1DF4639D007273FA /* AlbumViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,9 @@
 		1BF1E3B9DF09929FABE55341 /* Pods_ImageCollectionExpander.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCollectionExpander.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D42C65D7EDA0E9DCE0F2885 /* Pods-ImageCollectionExpander.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCollectionExpander.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCollectionExpander/Pods-ImageCollectionExpander.release.xcconfig"; sourceTree = "<group>"; };
 		2EF12823BC1401B633CA503E /* Pods-ImageCollectionExpander.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCollectionExpander.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCollectionExpander/Pods-ImageCollectionExpander.debug.xcconfig"; sourceTree = "<group>"; };
+		DB4274301DF442C500649141 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DB42754A1DF445C700649141 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DB42754E1DF44BEB00649141 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB59E6EA1DE39B7900859456 /* ImageCollectionExpander.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageCollectionExpander.entitlements; sourceTree = "<group>"; };
 		DB6E13011DD89FE600B54D52 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DB6E13031DD8A0F300B54D52 /* ImageCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollection.swift; sourceTree = "<group>"; };
@@ -60,6 +68,8 @@
 		DB6FFDE01DD8982900C087A6 /* ImageCollectionExpanderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCollectionExpanderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6FFDE41DD8982900C087A6 /* ImageCollectionExpanderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionExpanderUITests.swift; sourceTree = "<group>"; };
 		DB6FFDE61DD8982A00C087A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB9281391DF46362007273FA /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		DB92813B1DF4639D007273FA /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +115,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB42754C1DF44BAA00649141 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				DB42754E1DF44BEB00649141 /* AlbumCollectionViewCell.swift */,
+				DB9281391DF46362007273FA /* ImageCollectionViewCell.swift */,
+			);
+			name = CustomCells;
+			sourceTree = "<group>";
+		};
+		DB42754D1DF44BB100649141 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				DB6FFDC61DD8982900C087A6 /* ViewController.swift */,
+				DB4274301DF442C500649141 /* BaseViewController.swift */,
+				DB42754A1DF445C700649141 /* HomeViewController.swift */,
+				DB92813B1DF4639D007273FA /* AlbumViewController.swift */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
 		DB6E13001DD89FBB00B54D52 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,14 +171,15 @@
 		DB6FFDC31DD8982900C087A6 /* ImageCollectionExpander */ = {
 			isa = PBXGroup;
 			children = (
-				DB59E6EA1DE39B7900859456 /* ImageCollectionExpander.entitlements */,
+				DB42754D1DF44BB100649141 /* Screens */,
+				DB42754C1DF44BAA00649141 /* CustomCells */,
 				DB6E13001DD89FBB00B54D52 /* Models */,
 				DB6FFDC41DD8982900C087A6 /* AppDelegate.swift */,
-				DB6FFDC61DD8982900C087A6 /* ViewController.swift */,
 				DB6FFDC81DD8982900C087A6 /* Main.storyboard */,
 				DB6FFDCB1DD8982900C087A6 /* Assets.xcassets */,
 				DB6FFDCD1DD8982900C087A6 /* LaunchScreen.storyboard */,
 				DB6FFDD01DD8982900C087A6 /* Info.plist */,
+				DB59E6EA1DE39B7900859456 /* ImageCollectionExpander.entitlements */,
 			);
 			path = ImageCollectionExpander;
 			sourceTree = "<group>";
@@ -243,6 +274,7 @@
 					DB6FFDC01DD8982900C087A6 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 4TSCY77WND;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -363,12 +395,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB42754F1DF44BEB00649141 /* AlbumCollectionViewCell.swift in Sources */,
 				DB6E13081DD8A12200B54D52 /* Tag.swift in Sources */,
 				DB6FFDC71DD8982900C087A6 /* ViewController.swift in Sources */,
 				DB6FFDC51DD8982900C087A6 /* AppDelegate.swift in Sources */,
+				DB42754B1DF445C700649141 /* HomeViewController.swift in Sources */,
 				DB6E13021DD89FE600B54D52 /* User.swift in Sources */,
+				DB92813A1DF46362007273FA /* ImageCollectionViewCell.swift in Sources */,
 				DB6E13041DD8A0F300B54D52 /* ImageCollection.swift in Sources */,
+				DB4274311DF442C500649141 /* BaseViewController.swift in Sources */,
 				DB6E13061DD8A11500B54D52 /* Image.swift in Sources */,
+				DB92813C1DF4639D007273FA /* AlbumViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +556,7 @@
 			baseConfigurationReference = 2EF12823BC1401B633CA503E /* Pods-ImageCollectionExpander.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ImageCollectionExpander/ImageCollectionExpander.entitlements;
 				DEVELOPMENT_TEAM = 4TSCY77WND;
 				INFOPLIST_FILE = ImageCollectionExpander/Info.plist;
@@ -526,6 +564,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.feelit.ImageCollectionExpander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -535,6 +575,7 @@
 			baseConfigurationReference = 1D42C65D7EDA0E9DCE0F2885 /* Pods-ImageCollectionExpander.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ImageCollectionExpander/ImageCollectionExpander.entitlements;
 				DEVELOPMENT_TEAM = 4TSCY77WND;
 				INFOPLIST_FILE = ImageCollectionExpander/Info.plist;
@@ -542,6 +583,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.feelit.ImageCollectionExpander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

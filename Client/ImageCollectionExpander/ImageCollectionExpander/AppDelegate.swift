@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import MOAspects
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        MOAspects.hookInstanceMethod(for: HomeViewController.self, selector: #selector(HomeViewController.addNewAlbum), aspectsPosition: .after, usingBlock: {
+//            print("view did loaded!")
+//        })
+        
+        let aClass = HomeViewController.self
+        let originalMethod = class_getInstanceMethod(aClass, "addNewAlbum")
+        let swizzledMethod = class_getInstanceMethod(aClass, "swizzledFunction")
+        method_exchangeImplementations(originalMethod, swizzledMethod)
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
