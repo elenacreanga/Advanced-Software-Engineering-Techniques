@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+    http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+   <!-- Initialization for data source -->
+   <bean id="dataSource" 
+      class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+      <property name="url" value="jdbc:mysql://localhost:3306/iec"/>
+      <property name="username" value="isabela"/>
+      <property name="password" value="password"/>
+   </bean>
+
+   <!-- Definition for userJDBCTemplate bean -->
+   <bean id="userJDBCTemplate" 
+      class="com.imageexpander.UserJDBCTemplate">
+      <property name="dataSource"  ref="dataSource" />    
+   </bean>
+   
+   <bean id="imageJDBCTemplate" 
+      class="com.imageexpander.ImageJDBCTemplate">
+      <property name="dataSource"  ref="dataSource" />    
+   </bean>
+   
+   <bean id="userAspect" class="com.imageexpander.UserAdvice" />
+   <bean id="imageAspect" class="com.imageexpander.ImageAdvice" />
+
+	<aop:config>
+ 		<aop:aspect ref="userAspect">
+			<aop:pointcut id="serviceMethods" expression="execution(* com.imageexpander.User*.*(..))" />
+  			<aop:before pointcut-ref="serviceMethods" method="beforeMethod" /> 
+			<aop:around pointcut-ref="serviceMethods" method="aroundMethod" />
+			<aop:after-returning pointcut-ref="serviceMethods" method="afterMethod" />
+		</aop:aspect>
+		<aop:aspect ref="imageAspect">
+			<aop:pointcut id="serviceMethods" expression="execution(* com.imageexpander.Image*.*(..))" />
+  			<aop:before pointcut-ref="serviceMethods" method="beforeMethod" /> 
+			<aop:around pointcut-ref="serviceMethods" method="aroundMethod" />
+			<aop:after-returning pointcut-ref="serviceMethods" method="afterMethod" />
+		</aop:aspect>
+	</aop:config>
+   
+      
+</beans>
