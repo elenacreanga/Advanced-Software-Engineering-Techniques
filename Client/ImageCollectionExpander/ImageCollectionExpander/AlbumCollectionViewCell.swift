@@ -29,12 +29,14 @@ class AlbumCollectionViewCell: UICollectionViewCell {
         coverImageView.image = nil
     }
     
+    func setDemoAlbum(){
+        titleLabel.text = "Album".uppercased()
+        coverImageView.image = #imageLiteral(resourceName: "backgroundImage")
+        tagsLabel.text = "soare, vara, mare, plaja, albastru"
+        return
+    }
+    
     func setAlbum(album:ImageCollection){
-//        titleLabel.text = "Album".uppercased()
-//        coverImageView.image = #imageLiteral(resourceName: "backgroundImage")
-//        tagsLabel.text = "soare, vara, mare, plaja, albastru"
-//        return
-        
         titleLabel.text = album.name.uppercased()
         coverImageView.setImageWith(URL(string:(album.images[0].uri ?? ""))!)
         

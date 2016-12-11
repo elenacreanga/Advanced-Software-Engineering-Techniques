@@ -39,14 +39,14 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.18.0):
     - FBSDKCoreKit
-  - MOAspects (1.0.0)
+  - SwiftFSM (0.2.1)
 
 DEPENDENCIES:
   - AFNetworking
   - FacebookCore
   - FacebookLogin
   - FacebookShare
-  - MOAspects (~> 1.0.0)
+  - SwiftFSM
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -57,8 +57,8 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 15fef8804a4629f98c6f4e55e81a76c9d725d85e
   FBSDKLoginKit: 6773073e970b2b15fb12e451ce7f11da0532b880
   FBSDKShareKit: 0b8d6cc3f103c75297eb3c62caec284a2ccf1b9e
-  MOAspects: 09dec0c48db7b2476284830debcfb1beb46ebdb4
+  SwiftFSM: e4aceb0c6191da419c8ce55babff3127c79947cf
 
-PODFILE CHECKSUM: 9cb771b7f3f0df714de1be86a679a73e7e9ff281
+PODFILE CHECKSUM: 11757995bd04f4429cb477734179e73f196c56fb
 
 COCOAPODS: 1.1.1

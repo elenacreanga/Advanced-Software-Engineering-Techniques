@@ -10,16 +10,23 @@ import UIKit
 
 class AlbumViewController: BaseViewController {
 
+    
+    @IBOutlet weak var photosCollectionView: UICollectionView!
+    
     fileprivate let cellReuseIdentifier = "ImageCollectionViewCell"
     fileprivate let itemsPerRow: CGFloat = 2
     fileprivate let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
     
     var album:ImageCollection?
+    var isDemo:Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        photosCollectionView.delegate = self
+        photosCollectionView.dataSource = self
+        
+        title = "Photos"
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +50,7 @@ class AlbumViewController: BaseViewController {
 extension AlbumViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return album?.images.count ?? 0
+        return album?.images.count ?? (isDemo ? 10 : 0)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -53,7 +60,12 @@ extension AlbumViewController: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier,
                                                       for: indexPath) as! ImageCollectionViewCell
-        cell.photoImageView.setImageWith(URL(string:(album?.images[0].uri ?? ""))!)
+        
+        if isDemo {
+            cell.photoImageView.image = #imageLiteral(resourceName: "backgroundImage")
+        } else {
+            cell.photoImageView.setImageWith(URL(string:(album?.images[0].uri ?? ""))!)
+        }
         return cell
     }
     
@@ -65,7 +77,7 @@ extension AlbumViewController: UICollectionViewDataSource, UICollectionViewDeleg
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
         
-        return CGSize(width: widthPerItem, height: widthPerItem * 0.5)
+        return CGSize(width: widthPerItem, height: widthPerItem)
     }
     
     func collectionView(_ collectionView: UICollectionView,

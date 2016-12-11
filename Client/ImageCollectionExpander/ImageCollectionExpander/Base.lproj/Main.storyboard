@@ -53,6 +53,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu9-OO-qvQ">
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogout:" destination="VWT-er-Oye" eventType="touchUpInside" id="Lbt-zp-3q9"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D71-zj-dG4">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sg8-ch-KXa">
@@ -116,8 +122,10 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="D71-zj-dG4" secondAttribute="trailing" id="7dI-bA-7nJ"/>
                             <constraint firstItem="D71-zj-dG4" firstAttribute="leading" secondItem="wQ4-NF-Svp" secondAttribute="leading" id="Cuf-ap-G7b"/>
-                            <constraint firstItem="D71-zj-dG4" firstAttribute="top" secondItem="XX9-IM-o20" secondAttribute="bottom" id="bEA-Ya-hY6"/>
+                            <constraint firstItem="D71-zj-dG4" firstAttribute="top" secondItem="XX9-IM-o20" secondAttribute="bottom" constant="40" id="bEA-Ya-hY6"/>
+                            <constraint firstItem="yu9-OO-qvQ" firstAttribute="top" secondItem="XX9-IM-o20" secondAttribute="bottom" id="fIF-nB-6cP"/>
                             <constraint firstItem="AMI-UZ-dSp" firstAttribute="top" secondItem="D71-zj-dG4" secondAttribute="bottom" id="m3d-Ep-cd3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yu9-OO-qvQ" secondAttribute="trailing" id="zEe-oY-2rv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -128,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="1848.8" y="124.58770614692655"/>
         </scene>
-        <!--View Controller-->
+        <!--Album View Controller-->
         <scene sceneID="xdk-M2-Mcr">
             <objects>
-                <viewController id="V6h-BE-pJn" sceneMemberID="viewController">
+                <viewController id="V6h-BE-pJn" customClass="AlbumViewController" customModule="ImageCollectionExpander" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sqk-Mn-nUj"/>
                         <viewControllerLayoutGuide type="bottom" id="x2R-Uv-w07"/>
@@ -156,21 +164,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QQl-LR-LmP">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="QQl-LR-LmP" secondAttribute="height" id="UXQ-Za-GZx"/>
-                                                    </constraints>
-                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QQl-LR-LmP"/>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="QQl-LR-LmP" firstAttribute="leading" secondItem="UXE-2U-myG" secondAttribute="leading" constant="10" id="Lpg-Lo-2DY"/>
                                             <constraint firstItem="QQl-LR-LmP" firstAttribute="top" secondItem="UXE-2U-myG" secondAttribute="top" constant="10" id="Tvx-CD-hez"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="QQl-LR-LmP" secondAttribute="bottom" constant="10" id="p4e-Tu-leE"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="QQl-LR-LmP" secondAttribute="trailing" id="hgd-CD-Qvd"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="QQl-LR-LmP" secondAttribute="bottom" id="p4e-Tu-leE"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="coverImageView" destination="QQl-LR-LmP" id="g96-X8-Dds"/>
+                                            <outlet property="photoImageView" destination="QQl-LR-LmP" id="ROX-U1-dRJ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -179,12 +184,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="y0M-m9-hDg" secondAttribute="trailing" id="LM1-hA-jd3"/>
-                            <constraint firstItem="y0M-m9-hDg" firstAttribute="top" secondItem="AmQ-TF-dEC" secondAttribute="top" id="Xnb-uZ-sqp"/>
                             <constraint firstItem="y0M-m9-hDg" firstAttribute="leading" secondItem="AmQ-TF-dEC" secondAttribute="leading" id="ivB-Bi-dtF"/>
                             <constraint firstItem="x2R-Uv-w07" firstAttribute="top" secondItem="y0M-m9-hDg" secondAttribute="bottom" id="vs4-hL-G2l"/>
+                            <constraint firstItem="y0M-m9-hDg" firstAttribute="top" secondItem="sqk-Mn-nUj" secondAttribute="bottom" id="yDH-d3-YoM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rjw-M5-4J7"/>
+                    <connections>
+                        <outlet property="photosCollectionView" destination="y0M-m9-hDg" id="xde-uj-1AK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pe4-cv-qLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

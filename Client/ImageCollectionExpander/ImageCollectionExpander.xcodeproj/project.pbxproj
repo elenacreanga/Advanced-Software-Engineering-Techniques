@@ -24,6 +24,9 @@
 		DB6FFDE51DD8982A00C087A6 /* ImageCollectionExpanderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6FFDE41DD8982900C087A6 /* ImageCollectionExpanderUITests.swift */; };
 		DB92813A1DF46362007273FA /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9281391DF46362007273FA /* ImageCollectionViewCell.swift */; };
 		DB92813C1DF4639D007273FA /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB92813B1DF4639D007273FA /* AlbumViewController.swift */; };
+		DBF5E8D51DFDA95900C3BEFF /* MachineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF5E8D41DFDA95900C3BEFF /* MachineState.swift */; };
+		DBF5E8D71DFDA96E00C3BEFF /* MachineTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF5E8D61DFDA96E00C3BEFF /* MachineTransition.swift */; };
+		DBF5E8D91DFDAA7F00C3BEFF /* AppStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF5E8D81DFDAA7F00C3BEFF /* AppStateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		DB6FFDE61DD8982A00C087A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB9281391DF46362007273FA /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB92813B1DF4639D007273FA /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		DBF5E8D41DFDA95900C3BEFF /* MachineState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineState.swift; sourceTree = "<group>"; };
+		DBF5E8D61DFDA96E00C3BEFF /* MachineTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineTransition.swift; sourceTree = "<group>"; };
+		DBF5E8D81DFDAA7F00C3BEFF /* AppStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,7 @@
 		DB6FFDC31DD8982900C087A6 /* ImageCollectionExpander */ = {
 			isa = PBXGroup;
 			children = (
+				DBF5E8D31DFDA94400C3BEFF /* FSM */,
 				DB42754D1DF44BB100649141 /* Screens */,
 				DB42754C1DF44BAA00649141 /* CustomCells */,
 				DB6E13001DD89FBB00B54D52 /* Models */,
@@ -180,6 +187,7 @@
 				DB6FFDCD1DD8982900C087A6 /* LaunchScreen.storyboard */,
 				DB6FFDD01DD8982900C087A6 /* Info.plist */,
 				DB59E6EA1DE39B7900859456 /* ImageCollectionExpander.entitlements */,
+				DBF5E8D81DFDAA7F00C3BEFF /* AppStateManager.swift */,
 			);
 			path = ImageCollectionExpander;
 			sourceTree = "<group>";
@@ -200,6 +208,15 @@
 				DB6FFDE61DD8982A00C087A6 /* Info.plist */,
 			);
 			path = ImageCollectionExpanderUITests;
+			sourceTree = "<group>";
+		};
+		DBF5E8D31DFDA94400C3BEFF /* FSM */ = {
+			isa = PBXGroup;
+			children = (
+				DBF5E8D41DFDA95900C3BEFF /* MachineState.swift */,
+				DBF5E8D61DFDA96E00C3BEFF /* MachineTransition.swift */,
+			);
+			name = FSM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,12 +413,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB42754F1DF44BEB00649141 /* AlbumCollectionViewCell.swift in Sources */,
+				DBF5E8D91DFDAA7F00C3BEFF /* AppStateManager.swift in Sources */,
 				DB6E13081DD8A12200B54D52 /* Tag.swift in Sources */,
 				DB6FFDC71DD8982900C087A6 /* ViewController.swift in Sources */,
+				DBF5E8D51DFDA95900C3BEFF /* MachineState.swift in Sources */,
 				DB6FFDC51DD8982900C087A6 /* AppDelegate.swift in Sources */,
 				DB42754B1DF445C700649141 /* HomeViewController.swift in Sources */,
 				DB6E13021DD89FE600B54D52 /* User.swift in Sources */,
 				DB92813A1DF46362007273FA /* ImageCollectionViewCell.swift in Sources */,
+				DBF5E8D71DFDA96E00C3BEFF /* MachineTransition.swift in Sources */,
 				DB6E13041DD8A0F300B54D52 /* ImageCollection.swift in Sources */,
 				DB4274311DF442C500649141 /* BaseViewController.swift in Sources */,
 				DB6E13061DD8A11500B54D52 /* Image.swift in Sources */,

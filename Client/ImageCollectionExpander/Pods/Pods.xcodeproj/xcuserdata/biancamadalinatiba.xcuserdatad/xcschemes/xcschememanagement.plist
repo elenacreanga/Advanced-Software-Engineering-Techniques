@@ -44,12 +44,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MOAspects.xcscheme</key>
+		<key>Pods-ImageCollectionExpander.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ImageCollectionExpander.xcscheme</key>
+		<key>SwiftFSM.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,7 +57,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1E224C7ED423736B9748E0BCD70F11D6</key>
+		<key>08DDD8869E5F283FE298A2175BF4831F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BF2D13EA7B8B1825FCA8F5779F1BB392</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DDBCFDE490CDFDABF6F16A26F346932D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E75EEA77FF7B7B719BA67E36B471137C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,6 +8,8 @@
 
 import UIKit
 import AFNetworking
+import FBSDKLoginKit
+
 
 class HomeViewController: BaseViewController {
     
@@ -20,6 +22,7 @@ class HomeViewController: BaseViewController {
     
     var albums:[ImageCollection]?
     var selectedAlbum:ImageCollection?
+    let isDemo:Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +68,23 @@ class HomeViewController: BaseViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showAlbum" {
             let destinationVC = segue.destination as! AlbumViewController
-            destinationVC.album = selectedAlbum
+            destinationVC.isDemo = isDemo
+            if !isDemo {
+                destinationVC.album = selectedAlbum
+            }
+        }
+    }
+    
+    @IBAction func onLogout(_ sender: UIButton) {
+        self.perform(#selector(HomeViewController.logout), with: nil, afterDelay: 3)
+    }
+    
+    func logout() {
+        FBSDKLoginManager().logOut()
+        if let _ = AppStateManager.sharedInstance.fsm.transitionWith(transition:.Logout) {
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            print("Transition was not valid")
         }
     }
 }
@@ -73,7 +92,7 @@ class HomeViewController: BaseViewController {
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return albums?.count ?? 0
+        return albums?.count ?? (isDemo ? 4 : 0)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -83,8 +102,13 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier,
                                                       for: indexPath) as! AlbumCollectionViewCell
-        if let album:ImageCollection = albums?[indexPath.row] {
-            cell.setAlbum(album: album)
+       
+        if isDemo {
+            cell.setDemoAlbum()
+        } else {
+            if let album:ImageCollection = albums?[indexPath.row] {
+                cell.setAlbum(album: album)
+            }
         }
         return cell
     }
@@ -113,6 +137,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedAlbum = albums?[indexPath.row]
+        if !isDemo {
+            selectedAlbum = albums?[indexPath.row]
+        }
     }
 }

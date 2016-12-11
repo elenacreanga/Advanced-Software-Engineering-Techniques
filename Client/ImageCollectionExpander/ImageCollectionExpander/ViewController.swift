@@ -59,6 +59,7 @@ class ViewController: BaseViewController, FBSDKLoginButtonDelegate {
         } else if result.isCancelled {
             print("CANCELED")
         } else {
+            AppStateManager.sharedInstance.fsm.transitionWith(transition:.Login)
             self.performSegue(withIdentifier: "loginSegue", sender: self)
         }
     }

@@ -11,5 +11,11 @@ import UIKit
 class ImageCollectionViewCell: UICollectionViewCell {
  
     @IBOutlet weak var photoImageView: UIImageView!
-    
+ 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.cornerRadius = 5.0
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 2
+    }
 }
