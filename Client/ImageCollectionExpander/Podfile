@@ -6,4 +6,5 @@ target 'ImageCollectionExpander' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
+  pod 'SwiftFSM'
 end

@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        AppStateManager.sharedInstance.startMonitoring()
+        
+//        let aClass = HomeViewController.self
+//        let originalMethod = class_getInstanceMethod(aClass, Selector(("addNewAlbum")))
+//        let swizzledMethod = class_getInstanceMethod(aClass, Selector(("swizzledFunction")))
+//        method_exchangeImplementations(originalMethod, swizzledMethod)
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     

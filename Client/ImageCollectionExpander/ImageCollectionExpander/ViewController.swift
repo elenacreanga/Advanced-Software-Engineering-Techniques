@@ -9,33 +9,48 @@
 import UIKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+class ViewController: BaseViewController, FBSDKLoginButtonDelegate {
 
-    @IBOutlet weak var statusLabel: UILabel!
+    let loginButton:FBSDKLoginButton = FBSDKLoginButton()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let fbLoginManager = FBSDKLoginManager()
         fbLoginManager.loginBehavior = FBSDKLoginBehavior.native
         
         if (FBSDKAccessToken.current() != nil) {
-            statusLabel.text = "User logged in."
+            userAlreadyLogged()
         }
         
-        let loginButton = FBSDKLoginButton()
         loginButton.center = self.view.center
         loginButton.delegate = self
         self.view.addSubview(loginButton)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 
+    func userAlreadyLogged() {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "loginSegue", sender: self)
+        } 
+    }
+    
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        statusLabel.text = "No user logged in."
+       
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
@@ -44,7 +59,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         } else if result.isCancelled {
             print("CANCELED")
         } else {
-            statusLabel.text = "User logged in."
+            AppStateManager.sharedInstance.fsm.transitionWith(transition:.Login)
+            self.performSegue(withIdentifier: "loginSegue", sender: self)
         }
     }
 }

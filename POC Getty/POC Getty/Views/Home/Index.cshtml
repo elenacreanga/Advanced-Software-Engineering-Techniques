@@ -1,0 +1,21 @@
+﻿@using System.Collections.Generic;
+@using POC_Getty.Models;
+
+@{
+    var images = ViewData["images"] as List<Image>;
+}
+
+<div class="row">
+    @foreach (var image in images)
+    {
+        var keywords = image.keywords;
+        var displaySizes = image.display_sizes;
+
+        <h4>Image title: @image.title</h4>
+        foreach (var size in displaySizes)
+        {
+            <img src="@size.uri" />
+        }
+        
+    }
+</div>
