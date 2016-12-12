@@ -7,7 +7,7 @@ namespace ImageCollectionExpander.DAL.DAL.Implementation
 {
     public class ImageCollectionExpanderDbContext : DbContext
     {
-        public ImageCollectionExpanderDbContext() : base("name=ImgCollectionExpander") { }
+        public ImageCollectionExpanderDbContext() : base("name=DefaultConnection") { }
 
         DbSet<Image> Images { get; set; }
 
