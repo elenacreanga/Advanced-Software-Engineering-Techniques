@@ -12,11 +12,10 @@ namespace ImageCollectionExpander.Domain
         public bool FromAPI { get; set; }
         public string GettyLocation { get; set; }
         public String GettySize { get; set; }
-        
         public String MainColor { get; set; }
         public String Title { get; set; }
         public String Uri { get; set; }
-        public String Uris { get; set; };
+
         public virtual Location FlickrLocation { get; set; }
 
         public int? FlickrLocationId { get; set; }
