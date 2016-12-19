@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL.Contracts\IGenericRepository.cs" />
+    <Compile Include="DAL.Contracts\IMapper.cs" />
     <Compile Include="DAL.Implementation\GenericRepository.cs" />
     <Compile Include="DAL.Implementation\ImageCollectionExpanderDbContext.cs" />
     <Compile Include="DAL.Implementation\Mappings\ImageCollectionMapping.cs" />
@@ -57,6 +58,11 @@
     <Compile Include="DAL.Implementation\Mappings\LocationMapping.cs" />
     <Compile Include="DAL.Implementation\Mappings\TagMapping.cs" />
     <Compile Include="DAL.Implementation\Mappings\UserMapping.cs" />
+    <Compile Include="Entities\Image.cs" />
+    <Compile Include="Entities\ImageCollection.cs" />
+    <Compile Include="Entities\Location.cs" />
+    <Compile Include="Entities\Tag.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,12 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ImageCollectionExpander.Domain\ImageCollectionExpander.Domain.csproj">
-      <Project>{6d06e1ad-adeb-4e4b-a553-0319415ae55c}</Project>
-      <Name>ImageCollectionExpander.Domain</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

@@ -1,9 +1,8 @@
-﻿using ICE.Infrastructure.Exceptions;
-using ImageCollectionExpander.Business.Business.Contracts;
+﻿using ImageCollectionExpander.Business.Business.Contracts;
 using ImageCollectionExpander.DAL.DAL.Contracts;
-using ImageCollectionExpander.Domain;
 using System;
 using System.Linq;
+using ImageCollectionExpander.DAL.Entities;
 
 namespace ImageCollectionExpander.Business.Business.Implementation
 {
@@ -29,7 +28,7 @@ namespace ImageCollectionExpander.Business.Business.Implementation
             if (collectionExists)
             {
                 var exceptionMessage = string.Format("The user {0} already has an image collection named {1}.", user.FbUserName, imageCollection.Name);
-                throw new BusinessException(exceptionMessage);
+                throw new Exception(exceptionMessage);
             }
 
             return true;
@@ -42,13 +41,13 @@ namespace ImageCollectionExpander.Business.Business.Implementation
             if (imageCollection == null)
             {
                 var message = "Image collection was not found";
-                throw new BusinessException(message);
+                throw new Exception(message);
             }
 
             if (name.Equals(string.Empty))
             {
                 var message = "Name cannot be empty!";
-                throw new BusinessException(message);
+                throw new Exception(message);
             }
 
             if (imageCollection.Name.Equals(name))

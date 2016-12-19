@@ -1,7 +1,7 @@
 ﻿using ImageCollectionExpander.DAL.DAL.Implementation.Mappings;
-using ImageCollectionExpander.Domain;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using ImageCollectionExpander.DAL.Entities;
 
 namespace ImageCollectionExpander.DAL.DAL.Implementation
 {

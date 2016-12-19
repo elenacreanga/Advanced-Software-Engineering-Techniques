@@ -1,4 +1,4 @@
-﻿using ImageCollectionExpander.Domain;
+﻿using ImageCollectionExpander.DAL.Entities;
 
 namespace ImageCollectionExpander.Business.Business.Contracts
 {

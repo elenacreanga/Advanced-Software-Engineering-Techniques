@@ -46,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Api.Getty">
+      <HintPath>..\packages\Getty.Images.API.1.0.0.3\lib\net40\Api.Getty.dll</HintPath>
+    </Reference>
     <Reference Include="Autofac, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.4.2.0\lib\net45\Autofac.dll</HintPath>
       <Private>True</Private>
@@ -87,6 +90,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -246,6 +252,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -333,6 +340,10 @@
     <ProjectReference Include="..\ICE.Infrastructure\ICE.Infrastructure.csproj">
       <Project>{F47D9CEF-5A15-4D0D-A459-F8120DE9211F}</Project>
       <Name>ICE.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImageCollectionExpander.Business\ImageCollectionExpander.Business.csproj">
+      <Project>{4ff34143-92cb-478a-a155-b545251d4e77}</Project>
+      <Name>ImageCollectionExpander.Business</Name>
     </ProjectReference>
     <ProjectReference Include="..\ImageCollectionExpander.DAL\ImageCollectionExpander.DAL.csproj">
       <Project>{67e7e46a-1d5a-4d13-8a89-9789a96e2e34}</Project>

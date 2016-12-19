@@ -56,6 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ImageCollectionExpander.Business\ImageCollectionExpander.Business.csproj">
+      <Project>{4FF34143-92CB-478A-A155-B545251D4E77}</Project>
+      <Name>ImageCollectionExpander.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ImageCollectionExpander.DAL\ImageCollectionExpander.DAL.csproj">
       <Project>{67e7e46a-1d5a-4d13-8a89-9789a96e2e34}</Project>
       <Name>ImageCollectionExpander.DAL</Name>

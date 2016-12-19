@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using FluentAssertions;
 using ImageCollectionExpander.Business.Business.Implementation;
-using ImageCollectionExpander.Domain;
 using ICE.Infrastructure.Exceptions;
 using ImageCollectionExpander.DAL.DAL.Contracts;
+using ImageCollectionExpander.DAL.Entities;
 using NSubstitute;
 
 namespace ImageCollectionExpander.Tests.Business

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ImageCollectionExpander.Domain
+namespace ImageCollectionExpander.DAL.Entities
 {
     public class Tag
     {
