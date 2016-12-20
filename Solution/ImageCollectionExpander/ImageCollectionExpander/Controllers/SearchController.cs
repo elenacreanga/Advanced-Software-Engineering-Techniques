@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace ImageCollectionExpander.Controllers
 {
-    [RoutePrefix("searchimages")]
+    [RoutePrefix("api/SearchImages")]
     public class SearchController : ApiController
     {
         public SearchController()
@@ -18,7 +18,7 @@ namespace ImageCollectionExpander.Controllers
             gettySearch = new GettySearch();
         }
 
-        [Route("bytag")]
+        [Route("ByTag")]
         [HttpGet]
         public async Task<HttpResponseMessage> GetImagesByTag([FromUri]List<string> tags)
         {

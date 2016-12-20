@@ -56,6 +56,7 @@
     <Compile Include="Business.Contracts\IGettySearch.cs" />
     <Compile Include="Business.Contracts\IImageCollectionFacade.cs" />
     <Compile Include="Business.Contracts\ISearchService.cs" />
+    <Compile Include="Business.Implementation\Flickr.cs" />
     <Compile Include="Business.Implementation\GettySearch.cs" />
     <Compile Include="Business.Implementation\ImageCollectionFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
