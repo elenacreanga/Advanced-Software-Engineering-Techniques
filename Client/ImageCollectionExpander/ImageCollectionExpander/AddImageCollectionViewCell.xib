@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLTStd-Lt.otf">
+            <string>HelveticaNeueLTStd-Lt</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddImageCollectionViewCell" id="gTV-IL-0wX" customClass="AddImageCollectionViewCell" customModule="ImageCollectionExpander" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="113"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="163" height="113"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZ0-gU-MyX">
+                        <rect key="frame" x="48.5" y="27" width="66.5" height="58.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddImage_grey-32x32" translatesAutoresizingMaskIntoConstraints="NO" id="P7p-xm-k9W">
+                                <rect key="frame" x="17" y="0.0" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="XvQ-kL-sV7"/>
+                                    <constraint firstAttribute="height" constant="32" id="wp7-hj-F5e"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81n-1M-tr4">
+                                <rect key="frame" x="0.0" y="42" width="66.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTStd-Lt" family="Helvetica Neue LT Std" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P7p-xm-k9W" firstAttribute="top" secondItem="zZ0-gU-MyX" secondAttribute="top" id="CmB-gL-Qcm"/>
+                            <constraint firstItem="P7p-xm-k9W" firstAttribute="centerX" secondItem="zZ0-gU-MyX" secondAttribute="centerX" id="I0u-Sa-jX3"/>
+                            <constraint firstItem="81n-1M-tr4" firstAttribute="leading" secondItem="zZ0-gU-MyX" secondAttribute="leading" id="NDD-tJ-8Zz"/>
+                            <constraint firstAttribute="trailing" secondItem="81n-1M-tr4" secondAttribute="trailing" id="QeN-HQ-W2H"/>
+                            <constraint firstItem="81n-1M-tr4" firstAttribute="top" secondItem="P7p-xm-k9W" secondAttribute="bottom" constant="10" id="Yjp-83-i1A"/>
+                            <constraint firstAttribute="bottom" secondItem="81n-1M-tr4" secondAttribute="bottom" id="x2G-b2-bGa"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="zZ0-gU-MyX" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="n0P-3s-81g"/>
+                <constraint firstItem="zZ0-gU-MyX" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="wKH-bH-8As"/>
+            </constraints>
+            <size key="customSize" width="163" height="113"/>
+            <point key="canvasLocation" x="90.5" y="139.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AddImage_grey-32x32" width="32" height="32"/>
+    </resources>
+</document>
