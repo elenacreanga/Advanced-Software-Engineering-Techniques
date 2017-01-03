@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlbumViewController: BaseViewController {
+class AlbumViewController: BaseViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     @IBOutlet weak var photosCollectionView: UICollectionView!
@@ -20,6 +20,7 @@ class AlbumViewController: BaseViewController {
     
     var album:ImageCollection?
     var isDemo:Bool = true
+    var newImage:Image?
     
     var selectedImageIndex:Int = 0
     
@@ -119,6 +120,17 @@ extension AlbumViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let images = album?.images {
+            if indexPath.row == images.count {
+                addPhoto()
+                return
+            }
+        } else {
+            addPhoto()
+            return
+        }
+        
         selectedImageIndex = indexPath.row
         self.performSegue(withIdentifier: "showImageDetails", sender: nil)
     }
@@ -148,5 +160,45 @@ extension AlbumViewController: UICollectionViewDataSource, UICollectionViewDeleg
                 vc.currentIndex = 0
             }
         }
+    }
+    
+    func addPhoto(){
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let chooseFromLibrary = UIAlertAction(title: "Select from library", style: .default, handler: openPhotoLibraryButton)
+        let takePhoto = UIAlertAction(title: "Take photo", style: .default, handler: openCameraButton)
+        alert.addAction(chooseFromLibrary)
+        alert.addAction(takePhoto)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func openPhotoLibraryButton(action:UIAlertAction) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func openCameraButton(action:UIAlertAction) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera;
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            //
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "addPhotoDetails", sender: nil)
     }
 }

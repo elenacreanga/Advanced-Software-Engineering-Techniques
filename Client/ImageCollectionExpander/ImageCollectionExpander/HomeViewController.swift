@@ -31,6 +31,8 @@ class HomeViewController: BaseViewController {
         navigationItem.setHidesBackButton(true, animated: false)
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewAlbum))
         navigationItem.setRightBarButton(addButton, animated: false)
+        let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logout))
+        navigationItem.setLeftBarButton(logoutButton, animated: false)
         
         albumsCollectionView.delegate = self
         albumsCollectionView.dataSource = self
@@ -73,10 +75,6 @@ class HomeViewController: BaseViewController {
                 destinationVC.album = selectedAlbum
             }
         }
-    }
-    
-    @IBAction func onLogout(_ sender: UIButton) {
-        self.perform(#selector(HomeViewController.logout), with: nil, afterDelay: 3)
     }
     
     func logout() {
