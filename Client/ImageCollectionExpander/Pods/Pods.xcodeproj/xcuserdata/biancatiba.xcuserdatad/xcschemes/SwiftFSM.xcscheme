@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F539AB15ABAA279504DEA1513E569DF0'
+               BlueprintIdentifier = '58747FFCBBC91C49D6FAAFB569012959'
                BlueprintName = 'SwiftFSM'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SwiftFSM.framework'>

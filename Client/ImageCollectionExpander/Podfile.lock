@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Alamofire (4.2.0)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -39,17 +40,23 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.18.0):
     - FBSDKCoreKit
+  - FLEX (2.4.0)
   - SwiftFSM (0.2.1)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - AFNetworking
+  - Alamofire
   - FacebookCore
   - FacebookLogin
   - FacebookShare
+  - FLEX (~> 2.0)
   - SwiftFSM
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
@@ -57,8 +64,10 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 15fef8804a4629f98c6f4e55e81a76c9d725d85e
   FBSDKLoginKit: 6773073e970b2b15fb12e451ce7f11da0532b880
   FBSDKShareKit: 0b8d6cc3f103c75297eb3c62caec284a2ccf1b9e
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   SwiftFSM: e4aceb0c6191da419c8ce55babff3127c79947cf
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 11757995bd04f4429cb477734179e73f196c56fb
+PODFILE CHECKSUM: 0b3b7a6d4bcba80ccf773d14ace8a98b5c26f95b
 
 COCOAPODS: 1.1.1

@@ -7,4 +7,7 @@ target 'ImageCollectionExpander' do
   pod 'FacebookLogin'
   pod 'FacebookShare'
   pod 'SwiftFSM'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'FLEX', '~> 2.0', :configurations => ['Debug']
 end

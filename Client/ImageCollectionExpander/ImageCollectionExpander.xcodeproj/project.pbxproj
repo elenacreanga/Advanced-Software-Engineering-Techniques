@@ -10,6 +10,9 @@
 		2328186F1E0D527700B501F8 /* AddImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328186D1E0D527700B501F8 /* AddImageCollectionViewCell.swift */; };
 		232818701E0D527700B501F8 /* AddImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2328186E1E0D527700B501F8 /* AddImageCollectionViewCell.xib */; };
 		232818721E0D5B9C00B501F8 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232818711E0D5B9C00B501F8 /* PhotoViewController.swift */; };
+		237BF9801E27840C00EE7B44 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237BF97F1E27840C00EE7B44 /* RequestBuilder.swift */; };
+		237BF9821E2785F000EE7B44 /* WebServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237BF9811E2785F000EE7B44 /* WebServiceEndpoints.swift */; };
+		237BF9841E27868500EE7B44 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237BF9831E27868500EE7B44 /* WebService.swift */; };
 		23BDD5D31E1BBC90002231D0 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BDD5D21E1BBC90002231D0 /* AddPhotoViewController.swift */; };
 		358EA29C2589CC05F184EF86 /* Pods_ImageCollectionExpander.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF1E3B9DF09929FABE55341 /* Pods_ImageCollectionExpander.framework */; };
 		DB4274311DF442C500649141 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4274301DF442C500649141 /* BaseViewController.swift */; };
@@ -56,6 +59,9 @@
 		2328186D1E0D527700B501F8 /* AddImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		2328186E1E0D527700B501F8 /* AddImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		232818711E0D5B9C00B501F8 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		237BF97F1E27840C00EE7B44 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		237BF9811E2785F000EE7B44 /* WebServiceEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceEndpoints.swift; sourceTree = "<group>"; };
+		237BF9831E27868500EE7B44 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		23BDD5D21E1BBC90002231D0 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		2EF12823BC1401B633CA503E /* Pods-ImageCollectionExpander.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCollectionExpander.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageCollectionExpander/Pods-ImageCollectionExpander.debug.xcconfig"; sourceTree = "<group>"; };
 		DB4274301DF442C500649141 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +125,16 @@
 				1D42C65D7EDA0E9DCE0F2885 /* Pods-ImageCollectionExpander.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		237BF97E1E2783D500EE7B44 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				237BF97F1E27840C00EE7B44 /* RequestBuilder.swift */,
+				237BF9811E2785F000EE7B44 /* WebServiceEndpoints.swift */,
+				237BF9831E27868500EE7B44 /* WebService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		8CFB0774969F42D04BF54183 /* Frameworks */ = {
@@ -189,6 +205,7 @@
 		DB6FFDC31DD8982900C087A6 /* ImageCollectionExpander */ = {
 			isa = PBXGroup;
 			children = (
+				237BF97E1E2783D500EE7B44 /* Services */,
 				DBF5E8D31DFDA94400C3BEFF /* FSM */,
 				DB42754D1DF44BB100649141 /* Screens */,
 				DB42754C1DF44BAA00649141 /* CustomCells */,
@@ -428,6 +445,8 @@
 				23BDD5D31E1BBC90002231D0 /* AddPhotoViewController.swift in Sources */,
 				DB42754F1DF44BEB00649141 /* AlbumCollectionViewCell.swift in Sources */,
 				DBF5E8D91DFDAA7F00C3BEFF /* AppStateManager.swift in Sources */,
+				237BF9821E2785F000EE7B44 /* WebServiceEndpoints.swift in Sources */,
+				237BF9801E27840C00EE7B44 /* RequestBuilder.swift in Sources */,
 				DB6E13081DD8A12200B54D52 /* Tag.swift in Sources */,
 				DB6FFDC71DD8982900C087A6 /* ViewController.swift in Sources */,
 				DBF5E8D51DFDA95900C3BEFF /* MachineState.swift in Sources */,
@@ -441,6 +460,7 @@
 				2328186F1E0D527700B501F8 /* AddImageCollectionViewCell.swift in Sources */,
 				232818721E0D5B9C00B501F8 /* PhotoViewController.swift in Sources */,
 				DB6E13061DD8A11500B54D52 /* Image.swift in Sources */,
+				237BF9841E27868500EE7B44 /* WebService.swift in Sources */,
 				DB92813C1DF4639D007273FA /* AlbumViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
